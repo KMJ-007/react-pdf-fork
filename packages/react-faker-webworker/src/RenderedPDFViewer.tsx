@@ -1,4 +1,4 @@
-import { PDFViewer as PDFViewerRenderer } from '@react-pdf/renderer';
+import { PDFViewer as PDFViewerRenderer } from 'smartagent-react-pdf-renderer';
 import { ComponentProps, FC, useDeferredValue, useEffect, useState } from 'react';
 import { useRenderPDF } from './useRenderPDF';
 

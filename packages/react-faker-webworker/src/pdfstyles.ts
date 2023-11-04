@@ -1,4 +1,4 @@
-import { StyleSheet } from "@react-pdf/renderer";
+import { StyleSheet } from "smartagent-react-pdf-renderer";
 
 export const pdfStyles = StyleSheet.create({
     addressBox: { padding: 3},

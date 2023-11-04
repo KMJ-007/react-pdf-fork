@@ -1,4 +1,4 @@
-import { Document, Page, Text, Font, View } from '@react-pdf/renderer';
+import { Document, Page, Text, Font, View } from 'smartagent-react-pdf-renderer';
 import { format, getTime, formatDistanceToNow,isValid, addDays } from 'date-fns';
 import { FC } from 'react';
 import { pdfStyles } from './pdfstyles';

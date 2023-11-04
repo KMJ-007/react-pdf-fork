@@ -1,4 +1,3 @@
-import { PDFViewer as PDFViewerRenderer } from '@react-pdf/renderer';
 import { ComponentProps, FC, useDeferredValue, useEffect, useState } from 'react';
 import { useAsync } from 'react-use';
 

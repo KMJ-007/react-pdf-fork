@@ -1,5 +1,5 @@
 {
-  "name": "@react-pdf/layout",
+  "name": "smartagent-react-pdf-layout",
   "version": "3.6.3",
   "license": "MIT",
   "description": "Resolve overall document component's layout",

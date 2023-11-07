@@ -8,7 +8,7 @@ const getBookmarkValue = title => {
     : title;
 };
 
-const resolveBookmarks = node => {
+const resolveBookmarks = (node, undefined, currentPageCallBack) => {
   let refs = 0;
 
   const children = (node.children || []).slice(0);
@@ -35,7 +35,9 @@ const resolveBookmarks = node => {
       });
     }
   }
-
+  if(currentPageCallBack){
+    currentPageCallBack("Bookmarks Resolved!")
+  }  
   return node;
 };
 

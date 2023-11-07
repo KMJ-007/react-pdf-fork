@@ -1,6 +1,6 @@
 {
   "name": "smartagent-react-pdf-layout",
-  "version": "3.6.5",
+  "version": "3.6.6",
   "license": "MIT",
   "description": "Resolve overall document component's layout",
   "author": "Diego Muracciole <diegomuracciole@gmail.com>",

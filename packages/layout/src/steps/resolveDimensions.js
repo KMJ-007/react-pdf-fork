@@ -281,12 +281,18 @@ export const resolvePageDimensions = (page, fontStore) => {
  * @param {Object} root object
  * @returns {Object} root object with correct 'box' layout attributes
  */
-const resolveDimensions = (node, fontStore) => {
+const resolveDimensions = (node, fontStore, currentPageCallBack) => {
+  if(currentPageCallBack){
+    currentPageCallBack("Resolving Page Dimension!")
+  }  
   if (!node.children) return node;
 
   const resolveChild = child => resolvePageDimensions(child, fontStore);
   const children = node.children.map(resolveChild);
 
+  if(currentPageCallBack){
+    currentPageCallBack("Page Dimension Resolved!")
+  }  
   return Object.assign({}, node, { children });
 };
 

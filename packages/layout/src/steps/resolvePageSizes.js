@@ -20,11 +20,13 @@ export const resolvePageSize = page => {
  * @param {Object} document root
  * @returns {Object} document root with resolved page sizes
  */
-const resolvePageSizes = root => {
+const resolvePageSizes = (root, undefined, currentPageCallBack) => {
   if (!root.children) return root;
 
   const children = root.children.map(resolvePageSize);
-
+  if(currentPageCallBack){
+    currentPageCallBack("Page Sizes Resolved!")
+  }  
   return Object.assign({}, root, { children });
 };
 

@@ -248,7 +248,7 @@ const paginate = (page, pageNumber, fontStore, currentPageCallBack) => {
   if (page.props?.wrap === false) return [page];
 
   let splittedPage = splitPage(page, pageNumber, fontStore);
-
+  console.log({splittedPage})
   const pages = [splittedPage[0]];
   let nextPage = splittedPage[1];
   let pageCount = 1;

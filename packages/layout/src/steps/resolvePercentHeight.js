@@ -65,11 +65,14 @@ const resolvePagePercentHeight = page => {
  * @param {Object} document root
  * @return {Object} transformed document root
  */
-const resolvePercentHeight = root => {
+const resolvePercentHeight = (root, undefined, currentPageCallBack) => {
   if (!root.children) return root;
 
   const children = root.children.map(resolvePagePercentHeight);
 
+  if(currentPageCallBack){
+    currentPageCallBack("Page Height Resolved!")
+  }
   return Object.assign({}, root, { children });
 };
 

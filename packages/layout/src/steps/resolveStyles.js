@@ -66,11 +66,13 @@ const resolvePageStyles = page => {
  * @param {Object} document root
  * @returns {Object} document root with resolved styles
  */
-const resolveStyles = root => {
+const resolveStyles = (root, undefined, currentPageCallBack) => {
   if (!root.children) return root;
 
   const children = root.children.map(resolvePageStyles);
-
+  if(currentPageCallBack){
+    currentPageCallBack("Page Styles Resolved!")
+  }  
   return Object.assign({}, root, { children });
 };
 

@@ -1,7 +1,7 @@
 import FontStore from '@react-pdf/font';
 import renderPDF from '@react-pdf/render';
 import PDFDocument from '@react-pdf/pdfkit';
-import layoutDocument from '@react-pdf/layout';
+import layoutDocument from 'smartagent-react-pdf-layout';
 
 import createRenderer from './renderer';
 import { version } from '../package.json';
@@ -15,7 +15,7 @@ let renderer;
 // We only want to trigger an update when PDF content changes
 const events = {};
 
-const pdf = (initialValue,currentPageCallBack) => {
+const pdf = (initialValue, currentPageCallBack) => {
   const onChange = () => {
     const listeners = events.change?.slice() || [];
     for (let i = 0; i < listeners.length; i += 1) listeners[i]();
@@ -45,7 +45,11 @@ const pdf = (initialValue,currentPageCallBack) => {
       pageMode,
     });
 
-    const layout = await layoutDocument(container.document, fontStore, currentPageCallBack);
+    const layout = await layoutDocument(
+      container.document,
+      fontStore,
+      currentPageCallBack,
+    );
     const fileStream = renderPDF(ctx, layout);
     return { layout, fileStream };
   };

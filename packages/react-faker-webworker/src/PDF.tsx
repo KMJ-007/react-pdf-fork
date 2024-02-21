@@ -1,4 +1,4 @@
-import { Document, Page, Text, Font, View } from 'smartagent-react-pdf-renderer';
+import { Document, Page, Text, Font, View, Image } from 'smartagent-react-pdf-renderer';
 import { format, getTime, formatDistanceToNow,isValid, addDays } from 'date-fns';
 import { FC } from 'react';
 import { pdfStyles } from './pdfstyles';
@@ -32,6 +32,7 @@ export const PDF: FC<PDFProps> = ({ data }) => {
           <Text style={{ width: '13%' }}>S.Inv.No.</Text>
           <Text style={{ ...pdfStyles.leftLightBorder, width: '13%' }}>Inv.Dt.</Text>
           <Text style={{ ...pdfStyles.leftLightBorder, width: '13%' }}>Pcs</Text>
+          <Image src={'https://smartagent-beta.blr1.cdn.digitaloceanspaces.com/invoice/151.jpeg_038aa000-b68d-41c1-9e50-ece3d723f95c'}/>
           <Text style={{ ...pdfStyles.leftLightBorder, width: '19%' }}>Inv.Amt.</Text>
           <Text style={{ ...pdfStyles.leftLightBorder, width: '18%' }}>Transport</Text>
           <Text style={{ ...pdfStyles.leftLightBorder, width: '13%' }}>LR.No.</Text>

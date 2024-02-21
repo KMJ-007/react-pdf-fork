@@ -1,6 +1,6 @@
 {
   "name": "smartagent-react-pdf-renderer",
-  "version": "3.1.17",
+  "version": "3.1.18",
   "license": "MIT",
   "description": "Create PDF files on the browser and server",
   "author": "Diego Muracciole <diegomuracciole@gmail.com>",
